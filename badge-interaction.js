@@ -883,6 +883,12 @@ export function mountBadgeInteraction(button, {onFlip} = {}) {
       const viewWidth = viewHeight * aspect;
       camera.aspect = aspect;
       camera.position.set(0, 0, viewHeight / 2 / Math.tan((FOV * Math.PI) / 360));
+      // The two printed faces sit only 0.0006 above the shell. A distant
+      // camera with a 0.1..200 range loses that separation on some GPUs.
+      // Keep a local depth range around the card, with room for its swing.
+      const depthRadius = Math.max(layout.width, layout.height) + 1;
+      camera.near = Math.max(0.1, camera.position.z - depthRadius);
+      camera.far = camera.position.z + depthRadius;
       camera.lookAt(0, 0, 0);
       camera.updateProjectionMatrix();
       camera.updateMatrixWorld();
