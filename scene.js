@@ -3,7 +3,7 @@ import {RoundedBoxGeometry} from './vendor/RoundedBoxGeometry.js';
 import {RoomEnvironment} from './vendor/RoomEnvironment.js';
 import {createStudioMaterials} from './materials.js';
 import {gsap,duration} from './motion.js';
-import {createPortraitBadge,createMonitorEyes,createCompactPinboard,createSketchSheet} from './homepage-objects.js';
+import {createPortraitBadge,createMonitorEyes,createCompactPinboard,createResumeSheet} from './homepage-objects.js';
 import {createReferenceComputer,createReferenceTurntable} from './devices.js';
 import {createDeskPhone} from './iphone.js';
 import {createMonitorGreeting} from './monitor-greeting.js';
@@ -99,9 +99,9 @@ export async function createWorkspace(canvas){
  const shadeGroup=new THREE.Group();shadeGroup.position.set(-.33,1.26,.04);shadeGroup.rotation.z=-.24;lamp.add(shadeGroup);
  cylinder(shadeGroup,.13,.32,.31,M.enamelSage,0,-.10,0);const shadeGlow=new THREE.MeshStandardMaterial({color:0xfff2ce,emissive:0xffd995,emissiveIntensity:.15});cylinder(shadeGroup,.28,.28,.012,shadeGlow,0,-.257,0);
  const lampLight=new THREE.PointLight(0xffdba2,0,5,2);lampLight.position.set(-.35,1,.15);lamp.add(lampLight);
- // The user's sneaker drawing becomes an entrance to their artwork.
- const sketch=interactive('life','手绘稿 · 看看我的画',[-3.0,2.4755,.95]);sketch.userData.action='art';
- sketch.add(await createSketchSheet({materials:M,loadTexture}));
+ // The user's resume stays on the existing paper's contact plane.
+ const sketch=interactive('resume','简历 · 查看与下载',[-3.0,2.4755,.95]);sketch.userData.action='resume';
+ sketch.add(await createResumeSheet({materials:M,loadTexture}));
  // Objects resting on the desk keep their contact plane during the entrance too.
  for(const object of [gamePhone,player,lamp,sketch])object.userData.grounded=true;
  const projectAnchor=new THREE.Vector3();

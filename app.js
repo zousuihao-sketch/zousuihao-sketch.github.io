@@ -61,7 +61,7 @@ function renderAbout(){
 <ul class="experience-details">
 <li>协助运营活动主会场及配套物料设计，根据活动主题延展视觉方案，配合完成后续修改、多尺寸适配与素材输出，保障活动排期内的设计交付。</li>
 <li>参与 AIGC 生图工作流，通过配色与材质方案生成、人工筛选和局部精修，整理可复用设计素材，使同类素材前期探索及制作耗时缩短约 <strong>20%</strong>。</li>
-</ul></article></section><button class="outline-btn" data-open="contact" style="margin-top:25px">和我聊聊</button></div></div>`;
+</ul></article></section><div class="about-actions"><button class="outline-btn" data-open="resume">查看简历</button><button class="outline-btn" data-open="contact">和我聊聊</button></div></div></div>`;
  const badge=$('#flip-profile-badge');
  function updateBadgeSide(flipped){
   badge.setAttribute('aria-pressed',String(flipped));
@@ -70,6 +70,13 @@ function renderAbout(){
  }
  profileBadgeEffect=mountProfileContact(document.querySelector('#profile-contact'),{onFlip:updateBadgeSide});
  bindOpenButtons(content);
+}
+
+function renderResume(){
+ activePanel='resume';$('#dialog-kicker').textContent='RESUME / 邹穗豪';
+ content.innerHTML=heading('我的简历','教育、工作与项目经历。')+'<div class="resume-toolbar"><button class="outline-btn" id="resume-zoom" aria-pressed="false" aria-controls="resume-preview">放大查看</button><a class="outline-btn" href="./assets/profile/resume.png" download="邹穗豪-简历.png">下载简历</a></div><div class="resume-preview" id="resume-preview" tabindex="0" aria-label="简历预览，可滚动查看"><img src="./assets/profile/resume.png" alt="邹穗豪的完整简历，包含个人介绍、教育背景、工作经历、项目经验和设计技能"></div>';
+ const preview=$('#resume-preview'),zoom=$('#resume-zoom');
+ zoom.addEventListener('click',()=>{const expanded=preview.classList.toggle('is-expanded');zoom.setAttribute('aria-pressed',String(expanded));zoom.textContent=expanded?'适应宽度':'放大查看';});
 }
 
 function renderLife(tab='photo',initialIndex=0){
@@ -116,7 +123,7 @@ function renderGame(){
  content.innerHTML='<h2 id="dialog-title" class="sr-only">鲜乐拍音乐小游戏</h2><div id="game-room" style="height:100%"></div>';
  gameRoomEffect=mountGameRoom($('#game-room'));
 }
-const renderers={work:renderWork,about:renderAbout,life:renderLife,contact:renderContact,music:renderMusic,game:renderGame};
+const renderers={work:renderWork,about:renderAbout,life:renderLife,contact:renderContact,music:renderMusic,game:renderGame,resume:renderResume};
 
 async function openPanel(id,options={}){
  if(id==='lamp'){toggleTheme();return;}

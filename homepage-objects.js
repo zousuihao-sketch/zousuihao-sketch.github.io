@@ -68,15 +68,13 @@ export async function createCompactPinboard({materials:M,loadTexture}){
  root.userData.sculptRuntime={nodes,meshes};return{root,photos};
 }
 
-export async function createSketchSheet({materials:M,loadTexture}){
- const root=new THREE.Group();root.name='sneaker-sketch';const artwork=await loadTexture('./assets/art/sneakers.png');
- const t=textureFromCanvas(1000,620,c=>{
-  c.fillStyle='#fff7e8';c.fillRect(0,0,1000,620);
-  if(artwork){const image=artwork.image,fit=Math.min(800/image.width,450/image.height),w=image.width*fit,h=image.height*fit;c.drawImage(image,50+(800-w)/2,120+(450-h)/2,w,h);}
-  c.strokeStyle='#c6b7a2';c.lineWidth=2;c.beginPath();c.moveTo(760,170);c.lineTo(760,430);c.moveTo(710,300);c.lineTo(930,300);c.ellipse(820,300,80,36,-.15,0,Math.PI*2);c.stroke();
-  c.font='22px Georgia';c.fillStyle='#a89a84';c.fillText('OBSERVE / SKETCH / REPEAT',52,70);c.font='italic 24px Georgia';c.fillText('little things, new ideas.',610,550);
+export async function createResumeSheet({materials:M,loadTexture}){
+ const root=new THREE.Group();root.name='resume-sheet';const resume=await loadTexture('./assets/profile/resume.png');
+ const t=textureFromCanvas(1400,810,c=>{
+  c.fillStyle='#fffffb';c.fillRect(0,0,1400,810);
+  if(resume){const image=resume.image,fit=Math.min(790/image.width,1380/image.height),w=image.width*fit,h=image.height*fit;c.translate(700,405);c.rotate(-Math.PI/2);c.drawImage(image,-w/2,-h/2,w,h);}
  });
- slab(root,'sketch-paper',1.42,.009,.83,M.paper);
- const page=print(root,'original-sneaker-drawing',1.40,.81,t,0,.006,0);page.rotation.x=-Math.PI/2;root.rotation.y=-.10;
+ slab(root,'resume-paper',1.42,.009,.83,M.paper);
+ const page=print(root,'original-resume',1.40,.81,t,0,.006,0);page.rotation.x=-Math.PI/2;root.rotation.y=-.10;
  return root;
 }

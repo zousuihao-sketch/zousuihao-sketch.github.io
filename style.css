@@ -83,3 +83,9 @@ body.scene-unavailable .quick-nav{opacity:1;pointer-events:auto;transform:transl
 .experience-details{margin:0;padding-left:1.2em;font-size:14px;line-height:1.95;color:var(--muted);overflow-wrap:anywhere}
 .experience-details li+li{margin-top:8px}
 .experience-details strong{font-weight:600;color:var(--ink)}
+.about-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.resume-toolbar{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 16px}
+.resume-preview{width:100%;max-height:65svh;overflow:auto;overscroll-behavior:contain;background:#fff;border:1px solid var(--line);border-radius:4px}
+.resume-preview img{display:block;width:100%;height:auto;max-width:none}
+.resume-preview.is-expanded img{width:1192px;min-width:100%}
+.resume-preview:focus-visible{outline:2px solid #748c91;outline-offset:3px}
