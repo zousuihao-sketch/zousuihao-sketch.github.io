@@ -1,0 +1,11 @@
+#content-dialog.game-dialog{width:min(640px,calc(100vw - 40px));height:min(900px,calc(100svh - 64px));max-height:900px;overflow:hidden;background:#fff}
+.game-dialog .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.game-dialog .dialog-top{height:58px;position:relative;background:#fff}
+.game-dialog #dialog-content{height:calc(100% - 58px);padding:0;overflow:hidden}
+.game-stage{height:100%;position:relative;isolation:isolate;background:#fff}
+.game-stage iframe{display:block;width:100%;height:100%;border:0;background:white}
+.game-load-state{position:absolute;inset:0;z-index:2;margin:0;display:grid;place-items:center;font-size:13px;letter-spacing:1px;color:#8a7d68;background:#faf8f2;pointer-events:none}
+.game-load-error{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#faf8f2;color:#796c5d;font-size:14px}
+.game-load-error a{font-size:12px;color:#8a7761;text-decoration:none}
+.game-load-state[hidden],.game-load-error[hidden]{display:none}
+@media(max-width:600px){#content-dialog.game-dialog{width:calc(100vw - 12px);height:calc(100svh - 12px);max-height:none;border-radius:12px}.game-dialog .dialog-top{height:44px;padding:7px 14px}.game-dialog #dialog-content{height:calc(100% - 44px)}.game-dialog .dialog-kicker{font-size:8px;letter-spacing:1px}.quick-nav button{padding-left:7px;padding-right:7px;font-size:10px;gap:4px}.quick-nav .nav-symbol{font-size:14px}}

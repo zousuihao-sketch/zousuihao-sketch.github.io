@@ -1,0 +1,79 @@
+[
+  {
+    "id": "bandao",
+    "title": "半岛铁盒",
+    "artist": "周杰伦",
+    "album": "八度空间",
+    "year": "2002",
+    "cover": "./assets/music/album-536161722.jpg",
+    "source": "https://music.apple.com/tw/album/%E5%8D%8A%E5%B3%B6%E9%90%B5%E7%9B%92/536161722",
+    "url": "./assets/music/audio/bandao.mp3",
+    "lyricsUrl": null
+  },
+  {
+    "id": "faruxue",
+    "title": "发如雪",
+    "artist": "周杰伦",
+    "album": "十一月的萧邦",
+    "year": "2005",
+    "cover": "./assets/music/album-536009641.jpg",
+    "source": "https://music.apple.com/tw/album/%E9%AB%AE%E5%A6%82%E9%9B%AA/536009641",
+    "url": "./assets/music/audio/faruxue.mp3",
+    "lyricsUrl": null
+  },
+  {
+    "id": "clock",
+    "title": "反方向的钟",
+    "artist": "周杰伦",
+    "album": "Jay · 同名专辑",
+    "year": "2000",
+    "cover": "./assets/music/album-535790918.jpg",
+    "source": "https://music.apple.com/tw/album/%E5%8F%8D%E6%96%B9%E5%90%91%E7%9A%84%E9%90%98/535790918",
+    "url": "./assets/music/audio/clock.mp3",
+    "lyricsUrl": null
+  },
+  {
+    "id": "qilixiang",
+    "title": "七里香",
+    "artist": "周杰伦",
+    "album": "七里香",
+    "year": "2004",
+    "cover": "./assets/music/album-536114662.jpg",
+    "source": "https://music.apple.com/tw/album/%E4%B8%83%E9%87%8C%E9%A6%99/536114662",
+    "url": "./assets/music/audio/qilixiang.mp3",
+    "lyricsUrl": "./assets/music/qilixiang-aligned.json"
+  },
+  {
+    "id": "qingtian",
+    "title": "晴天",
+    "artist": "周杰伦",
+    "album": "叶惠美",
+    "year": "2003",
+    "cover": "./assets/music/album-535824731.jpg",
+    "source": "https://music.apple.com/tw/album/%E6%99%B4%E5%A4%A9/535824731",
+    "url": "./assets/music/audio/qingtian.mp3",
+    "lyricsUrl": null
+  },
+  {
+    "id": "north",
+    "title": "一路向北",
+    "artist": "周杰伦",
+    "album": "十一月的萧邦",
+    "year": "2005",
+    "cover": "./assets/music/album-536009641.jpg",
+    "source": "https://music.apple.com/tw/album/%E4%B8%80%E8%B7%AF%E5%90%91%E5%8C%97-bonus-track/536009641",
+    "url": "./assets/music/audio/north.mp3",
+    "lyricsUrl": null
+  },
+  {
+    "id": "daoxiang",
+    "title": "稻香",
+    "artist": "周杰伦",
+    "album": "魔杰座",
+    "year": "2008",
+    "cover": "./assets/music/album-1624000713.jpg",
+    "source": "https://music.apple.com/tw/album/%E7%A8%BB%E9%A6%99/1624000713",
+    "url": "./assets/music/audio/daoxiang.mp3",
+    "lyricsUrl": null
+  }
+]

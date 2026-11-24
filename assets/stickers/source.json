@@ -1,0 +1,82 @@
+{
+  "source": "D:\\15332\\Pictures\\设计素材.library\\images\\MWRW83IYC1GVL.info\\贴纸 - 搜索结果 - 花瓣.png",
+  "stickers": [
+    {
+      "id": "music",
+      "sourceBox": [
+        129,
+        56,
+        402,
+        188
+      ],
+      "width": 273,
+      "height": 132
+    },
+    {
+      "id": "star",
+      "sourceBox": [
+        714,
+        539,
+        936,
+        748
+      ],
+      "width": 222,
+      "height": 209
+    },
+    {
+      "id": "heart",
+      "sourceBox": [
+        870,
+        1426,
+        1058,
+        1671
+      ],
+      "width": 188,
+      "height": 245
+    },
+    {
+      "id": "smile",
+      "sourceBox": [
+        230,
+        2134,
+        349,
+        2256
+      ],
+      "width": 119,
+      "height": 122
+    },
+    {
+      "id": "turntable",
+      "sourceBox": [
+        550,
+        1385,
+        837,
+        1634
+      ],
+      "width": 287,
+      "height": 249
+    },
+    {
+      "id": "rainbow",
+      "sourceBox": [
+        346,
+        2123,
+        638,
+        2302
+      ],
+      "width": 292,
+      "height": 179
+    },
+    {
+      "id": "game",
+      "sourceBox": [
+        627,
+        389,
+        882,
+        496
+      ],
+      "width": 255,
+      "height": 107
+    }
+  ]
+}

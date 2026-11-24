@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#f5f5f1"><meta name="description" content="邹穗豪的设计工作台。探索 UI/UX、视觉设计与生活中的灵感。">
+ <title>穗豪的工作台 · SUIHAO STUDIO</title>
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23dbe4e9'/%3E%3Ctext x='12' y='44' font-family='Arial' font-size='34' font-weight='bold' fill='%233a4e5a'%3Esh%3C/text%3E%3C/svg%3E">
+ <link rel="stylesheet" href="./style.css">
+ <link rel="stylesheet" href="./elastic-slider.css">
+ <link rel="stylesheet" href="./music-room.css">
+ <link rel="stylesheet" href="./project-folder.css">
+ <link rel="stylesheet" href="./stickers.css">
+ <link rel="stylesheet" href="./game-room.css">
+ <link rel="stylesheet" href="./artworks.css">
+ <link rel="stylesheet" href="./studio-guide.css">
+ <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+ <a class="skip-link" href="#quick-nav">跳到内容导航</a>
+ <header class="header">
+  <a class="wordmark" href="./" aria-label="穗豪的工作台首页">suihao<span class="brand-dot">.</span><span class="wordmark-caption">DESIGN & EVERYDAY</span></a>
+  <nav aria-label="主导航"><button data-open="work">作品</button><button data-open="about">关于</button><button data-open="life">生活</button><button data-open="contact">联系</button></nav>
+  <div class="header-actions"><span id="clock">NANCHANG · --:--</span><button class="icon-btn theme-button" id="theme-toggle" aria-label="切换到夜晚" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☼</span></button></div>
+ </header>
+ <main>
+  <section class="workspace" aria-label="可探索的设计师工作台">
+   <div class="intro"><h1>设计，也发生在日常。</h1><p>我是穗豪，欢迎来我的工作台坐坐。</p></div>
+   <div class="scene" id="scene"><canvas id="workspace-canvas" aria-label="正面视角的三维设计工作台，使用下方导航可访问全部内容"></canvas></div>
+   <div class="loading" id="loading" role="status"><span></span><p>正在整理工作台…</p></div>
+   <div class="scene-error" id="scene-error" hidden><p>这个浏览器暂时无法呈现 3D 场景。</p><p>你仍然可以通过下方导航查看全部作品。</p></div>
+   <div class="object-tooltip" id="object-tooltip" aria-hidden="true"></div>
+   <div class="scene-caption"><span id="scene-caption">点击物件，探索我的工作与日常</span></div>
+  </section>
+  <footer class="footer"><div class="footer-signature">在好奇与创造之间<span>UI/UX · VISUAL · LIFE</span></div><nav class="quick-nav" id="quick-nav" aria-label="工作台物件导航"><button data-open="work"><span class="nav-symbol">▣</span>作品集</button><button data-open="about"><span class="nav-symbol">▤</span>关于我</button><button data-open="life"><span class="nav-symbol">◎</span>生活灵感</button><button data-open="music"><span class="nav-symbol">♫</span>音乐角落</button><button data-open="game"><span class="nav-symbol">◇</span>小游戏</button></nav><button class="reset-view" id="reset-view" title="回到初始视角">回到工作台 <span aria-hidden="true">⤾</span></button></footer>
+ </main>
+ <dialog id="content-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="dialog-kicker" id="dialog-kicker">SUIHAO STUDIO</span><button class="close-btn" id="close-dialog" aria-label="关闭窗口">×</button></div><div id="dialog-content"></div></dialog>
+ <div id="camera-flash" aria-hidden="true"></div>
+ <div class="toast" id="toast" role="status" aria-live="polite"></div>
+ <noscript><p class="noscript">请启用 JavaScript 查看交互工作台。</p></noscript>
+ <script src="./vendor/gsap.min.js"></script>
+ <script type="module" src="./app.js"></script>
+</body>
+</html>
